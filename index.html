@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            background-color: #f0e1c2;
+            color: #333;
+            font-family: "MS Mincho", serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: normal;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d2691e;
+        }
+
+        section {
+            background-color: #ffffff;
+            border: 2px solid #333;
+            padding: 15px;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            font-weight: normal;
+            border-bottom: 1px dashed #333;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            border-top: 2px solid #333;
+            padding-top: 10px;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .animated {
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header class="animated">
+        <h1>Frontend Developer</h1>
+        <p>Akram Rahardi R</p>
+    </header>
+
+    <nav class="animated">
+        <a href="#about">Tentang Saya</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#projects">Proyek</a>
+    </nav>
+
+    <section id="about" class="animated">
+        <h2>Tentang Saya</h2>
+        <p>Saya Akram Rahardi R, seorang pengembang frontend asal Indonesia. Saya memiliki keahlian dalam Vue.js, React.js, dan AngularJS. Portofolio ini dibuat untuk memperkenalkan keahlian dan proyek-proyek yang telah saya kerjakan.</p>
+    </section>
+
+    <section id="skills" class="animated">
+        <h2>Skill</h2>
+        <ul>
+            <li>Vue.js - Memiliki kemampuan untuk membuat aplikasi modern.</li>
+            <li>React.js - Dapat membangun UI yang dinamis.</li>
+            <li>AngularJS - Sangat cocok untuk pengembangan proyek berskala besar.</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="animated">
+        <h2>Portfolio</h2>
+        <p>Silakan lihat proyek terbaru saya.</p>
+        <ul>
+            <li><strong>Todo App (Aplikasi Todo)</strong> - Aplikasi daftar tugas sederhana menggunakan Vue.js.</li>
+            <li><strong>Weather Dashboard (Dasbor Cuaca)</strong> - Dasbor cuaca yang kuat menggunakan React.js.</li>
+            <li><strong>Task Manager (Pengelola Tugas)</strong> - Alat manajemen tugas yang canggih menggunakan AngularJS.</li>
+        </ul>
+    </section>
+
+    <footer class="animated">
+        <p>&copy; 2024 Pengembang Frontend Akram Rahardi R. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            sections.forEach(section => {
+                section.addEventListener("click", () => {
+                    // alert(`You clicked on the ${section.querySelector("h2").textContent} section.`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
