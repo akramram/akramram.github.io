@@ -5,8 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="./assets/icon-COVeAZuX.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Akram Rahardi - Frontend Developer</title>
-    <script type="module" crossorigin src="./assets/index-CAwe4jqm.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DFTGzBTY.css">
+    <script>
+      window.addEventListener('vite:preloadError', (event) => {
+        // You can log the event if you want to inspect it
+        console.error('Vite preload error:', event);
+        console.error('Attempting to reload the page...');
+        window.location.reload();
+      });
+    </script>
+    <script type="module" crossorigin src="./assets/index-Z8lDbbu7.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-De7dnmqw.css">
   </head>
   <body>
     <div id="app"></div>
