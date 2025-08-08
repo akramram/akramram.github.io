@@ -1,7 +1,7 @@
 <template>
   <section id="projects" class="animated projects-component">
-    <h2>Portfolio</h2>
-    <p>Berikut adalah proyek-proyek profesional yang telah saya kerjakan selama perjalanan karir saya:</p>
+    <h2 class="text-xl md:text-2xl font-bold uppercase tracking-wide md:tracking-wider break-words">Portfolio</h2>
+    <p class="text-sm md:text-base mb-4 md:mb-6 break-words">Berikut adalah proyek-proyek profesional yang telah saya kerjakan selama perjalanan karir saya:</p>
 
     <!-- Timeline Container -->
     <div class="timeline-container">

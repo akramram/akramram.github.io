@@ -1,12 +1,12 @@
 <template>
   <section id="skills" class="animated skills-component" @click="handleSectionClick('Skill')">
-    <h2>Skill</h2>
-    <ul class="grid grid-cols-4 gap-2">
+    <h2 class="text-xl md:text-2xl font-bold uppercase tracking-wide md:tracking-wider break-words">Skill</h2>
+    <ul class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-3">
       <li v-for="skill in skills" :key="skill.name">
         <a 
           :href="skill.url" 
           target="_blank" 
-          class="retro-card inline-block w-full text-black bg-white border-2 border-black px-4 py-3 font-mono font-bold text-sm uppercase tracking-wide no-underline"
+          class="retro-card inline-block w-full text-black bg-white border-2 border-black px-3 md:px-4 py-2 md:py-3 font-mono font-bold text-xs md:text-sm uppercase tracking-wide no-underline min-h-[44px] md:min-h-0 flex items-center justify-center break-words"
           style="box-shadow: 3px 3px 0px #000;"
         >
           {{ skill.name }}

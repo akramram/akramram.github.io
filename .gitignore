@@ -3,3 +3,4 @@ bun.lock
 package-lock.json
 .env
 bun.lockb
+dist

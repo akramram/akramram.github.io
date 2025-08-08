@@ -2,3 +2,12 @@
 .footer-component {
   /* Footer component specific styles if needed */
 }
+
+.footer-component a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-component a:hover {
+  text-decoration: underline;
+}

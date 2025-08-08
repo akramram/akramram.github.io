@@ -2,16 +2,16 @@
 <template>
   <div
     v-if="visible"
-    class="z-[1000] fixed inset-0 flex justify-center items-center bg-black/50 m-0 p-0 w-screen h-screen"
+    class="z-[1000] fixed inset-0 flex justify-center items-center bg-black/50 m-0 p-2 md:p-4 w-screen h-screen"
     @click.self="closeModal"
   >
     <div
-      class="receipt-modal relative bg-white shadow-xl p-6 border-2 border-black rounded-none max-w-[400px] w-[90vw] font-mono text-black project-card"
+      class="receipt-modal relative bg-white shadow-xl p-3 md:p-6 border-2 border-black rounded-none max-w-[95vw] md:max-w-[600px] w-full font-mono text-black project-card"
       :class="sizeClass"
-      style="box-shadow: 4px 4px 0px #000; min-height: 300px;"
+      style="box-shadow: 4px 4px 0px #000; min-height: 300px; max-height: 90vh; overflow-y: auto;"
     >
       <!-- Receipt Header -->
-      <div class="text-center border-b-2 border-black pb-3 mb-4">
+      <div class="text-center border-b-2 border-black pb-2 md:pb-3 mb-3 md:mb-4">
         <div class="text-xs font-bold uppercase tracking-wider">AKRAM RAHARDI</div>
         <div class="text-xs">Frontend Developer Portfolio</div>
         <div class="text-xs">--------------------------------</div>
@@ -19,7 +19,7 @@
 
       <!-- Close Button -->
       <button
-        class="top-2 right-2 absolute focus:outline-none text-black hover:text-gray-600 text-xl font-bold border border-black bg-white px-1 py-0"
+        class="top-2 right-2 absolute focus:outline-none text-black hover:text-gray-600 text-xl font-bold border border-black bg-white px-1 py-0 min-h-[44px] md:min-h-0 flex items-center justify-center"
         @click="closeModal"
         aria-label="Tutup"
         style="box-shadow: 2px 2px 0px #000;"
@@ -27,12 +27,12 @@
 
       <!-- Receipt Content -->
       <div class="receipt-content">
-        <div class="text-center mb-4">
-          <h3 class="text-sm font-bold uppercase tracking-wide border-b border-black pb-2 mb-3">{{ project.title }}</h3>
+        <div class="text-center mb-3 md:mb-4">
+          <h3 class="text-sm font-bold uppercase tracking-wide border-b border-black pb-2 mb-3 break-words">{{ project.title }}</h3>
         </div>
         
-        <div class="text-xs leading-relaxed prose prose-xs font-mono max-h-[400px] overflow-y-auto">
-          <div class="receipt-period mb-3 text-center font-bold">
+        <div class="text-xs leading-relaxed prose prose-xs font-mono max-h-[300px] md:max-h-[400px] overflow-y-auto">
+          <div class="receipt-period mb-3 text-center font-bold break-words">
             {{ project.description }}
           </div>
           
@@ -40,7 +40,7 @@
             <div 
               v-for="(item, index) in items" 
               :key="index" 
-              class="receipt-item"
+              class="receipt-item break-words"
               :class="{ 
                 'receipt-header': item.type === 'header',
                 'receipt-emphasis': isEmphasisItem(item.text) && item.type === 'item',

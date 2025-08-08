@@ -11,10 +11,11 @@
 @import "./components/footer.css";
 
 @custom-variant dark (&:is(.dark *));
-/* Global styles can go here if not in a separate main.css */
-/* For example, the body, animations from the original <style> tag */
+
+/* Mobile-first responsive design */
 html {
   scroll-behavior: smooth;
+  font-size: 16px; /* Base font size for mobile */
 }
 
 body { /* This will apply globally */
@@ -24,38 +25,59 @@ body { /* This will apply globally */
     line-height: 1.6;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px; /* Reduced padding for mobile */
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Responsive container */
+@media (min-width: 768px) {
+  body {
+    padding: 20px;
+  }
 }
 
 /* Global styles for elements as in the original embedded style */
 header { /* Styles for <header> element, used by HeaderComponent */
     text-align: center;
     border: 3px solid #000;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 10px; /* Reduced padding for mobile */
+    margin-bottom: 15px;
     background: #fff;
     box-shadow: 4px 4px 0px #000;
+    overflow: hidden; /* Prevent text overflow */
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
 }
 
 nav { /* Styles for <nav> element, used by NavigationComponent */
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: 2px solid #000;
-    padding: 10px;
+    padding: 8px; /* Reduced padding for mobile */
     background: #fff;
     box-shadow: 3px 3px 0px #000;
 }
 
+@media (min-width: 768px) {
+  nav {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+}
+
 nav a {
-    margin: 0 15px;
     text-decoration: none;
     color: #000;
     font-weight: bold;
     transition: all 0.2s;
-    padding: 5px 10px;
     border: 1px solid transparent;
 }
 
@@ -69,11 +91,19 @@ nav a:hover {
 section { /* Styles for <section> elements, used by About, Skills, Projects */
     background-color: #ffffff;
     border: 3px solid #000;
-    padding: 20px;
-    margin-bottom: 25px;
+    padding: 15px; /* Reduced padding for mobile */
+    margin-bottom: 20px;
     transition: transform 0.2s;
     box-shadow: 4px 4px 0px #000;
     position: relative;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
 }
 
 section:hover {
@@ -81,24 +111,20 @@ section:hover {
     box-shadow: 6px 6px 0px #000;
 }
 
-section h2 {
-    font-size: 1.8em;
-    font-weight: bold;
-    border-bottom: 2px solid #000;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
 footer { /* Styles for <footer> element, used by FooterComponent */
     text-align: center;
     border: 3px solid #000;
-    padding: 15px;
-    margin-top: 20px;
-    font-size: 0.9em;
+    padding: 12px; /* Reduced padding for mobile */
+    margin-top: 15px;
     background: #fff;
     box-shadow: 4px 4px 0px #000;
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding: 15px;
+    margin-top: 20px;
+  }
 }
 
 @keyframes fadeIn {
@@ -115,9 +141,17 @@ footer { /* Styles for <footer> element, used by FooterComponent */
   /* Styles for the root Vue app container if necessary */
   border: 4px solid #000;
   background: #f0e1c2;
-  padding: 20px;
+  padding: 10px; /* Reduced padding for mobile */
   box-shadow: 6px 6px 0px #000;
   position: relative;
+  max-width: 100%; /* Ensure it doesn't overflow */
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  #app {
+    padding: 20px;
+  }
 }
 
 #app::before {
@@ -133,6 +167,8 @@ footer { /* Styles for <footer> element, used by FooterComponent */
 
 main {
   /* If you want to wrap sections in a main tag like in semantic HTML */
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Retro button styles */
@@ -140,7 +176,7 @@ main {
   background: #000;
   color: #fff;
   border: 2px solid #000;
-  padding: 10px 20px;
+  padding: 8px 16px; /* Smaller padding for mobile */
   font-family: "Courier New", monospace;
   font-weight: bold;
   text-transform: uppercase;
@@ -148,6 +184,17 @@ main {
   transition: all 0.2s;
   box-shadow: 3px 3px 0px #000;
   position: relative;
+  font-size: 0.9em; /* Smaller font for mobile */
+  width: 100%; /* Full width on mobile */
+  max-width: 300px; /* Max width to prevent too wide buttons */
+}
+
+@media (min-width: 768px) {
+  .retro-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    width: auto;
+  }
 }
 
 .retro-button:hover {
@@ -164,10 +211,18 @@ main {
 .retro-card {
   background: #fff;
   border: 3px solid #000;
-  padding: 15px;
-  margin: 10px 0;
+  padding: 12px; /* Reduced padding for mobile */
+  margin: 8px 0;
   box-shadow: 4px 4px 0px #000;
   transition: all 0.2s;
+  word-wrap: break-word; /* Prevent text overflow */
+}
+
+@media (min-width: 768px) {
+  .retro-card {
+    padding: 15px;
+    margin: 10px 0;
+  }
 }
 
 .retro-card:hover {
@@ -195,6 +250,17 @@ main {
 .retro-yellow {
   background: #ffff00;
   color: #000;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal scrolling */
+* {
+  box-sizing: border-box;
 }
 
 @theme inline {
