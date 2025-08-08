@@ -1,87 +1,200 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Import component styles */
+@import "./components/header.css";
+@import "./components/navigation.css";
+@import "./components/about.css";
+@import "./components/skills.css";
+@import "./components/projects.css";
+@import "./components/project-card.css";
+@import "./components/footer.css";
+
 @custom-variant dark (&:is(.dark *));
 /* Global styles can go here if not in a separate main.css */
 /* For example, the body, animations from the original <style> tag */
+html {
+  scroll-behavior: smooth;
+}
+
 body { /* This will apply globally */
     background-color: #f0e1c2;
-    color: #333;
-    font-family: "MS Mincho", serif;
+    color: #000;
+    font-family: "Courier New", "MS Mincho", monospace;
     line-height: 1.6;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
 }
 
 /* Global styles for elements as in the original embedded style */
 header { /* Styles for <header> element, used by HeaderComponent */
     text-align: center;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
+    border: 3px solid #000;
+    padding: 15px;
     margin-bottom: 20px;
+    background: #fff;
+    box-shadow: 4px 4px 0px #000;
 }
 
 nav { /* Styles for <nav> element, used by NavigationComponent */
     text-align: center;
     margin-bottom: 20px;
+    border: 2px solid #000;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 3px 3px 0px #000;
 }
 
 nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #333;
+    color: #000;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: all 0.2s;
+    padding: 5px 10px;
+    border: 1px solid transparent;
 }
 
 nav a:hover {
-    color: #d2691e;
+    color: #000;
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
 }
 
 section { /* Styles for <section> elements, used by About, Skills, Projects */
     background-color: #ffffff;
-    border: 2px solid #333;
-    padding: 15px;
-    margin-bottom: 20px;
-    transition: transform 0.3s;
+    border: 3px solid #000;
+    padding: 20px;
+    margin-bottom: 25px;
+    transition: transform 0.2s;
+    box-shadow: 4px 4px 0px #000;
+    position: relative;
 }
 
 section:hover {
-    transform: scale(1.02);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #000;
 }
 
 section h2 {
     font-size: 1.8em;
-    font-weight: normal;
-    border-bottom: 1px dashed #333;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 footer { /* Styles for <footer> element, used by FooterComponent */
     text-align: center;
-    border-top: 2px solid #333;
-    padding-top: 10px;
+    border: 3px solid #000;
+    padding: 15px;
     margin-top: 20px;
     font-size: 0.9em;
+    background: #fff;
+    box-shadow: 4px 4px 0px #000;
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 .animated {
-    animation: fadeIn 2s ease-in-out;
+    animation: fadeIn 1s ease-out;
 }
 
 /* Add any other global styles if needed */
 #app {
   /* Styles for the root Vue app container if necessary */
+  border: 4px solid #000;
+  background: #f0e1c2;
+  padding: 20px;
+  box-shadow: 6px 6px 0px #000;
+  position: relative;
 }
+
+#app::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: #000;
+  z-index: -1;
+}
+
 main {
   /* If you want to wrap sections in a main tag like in semantic HTML */
+}
+
+/* Retro button styles */
+.retro-button {
+  background: #000;
+  color: #fff;
+  border: 2px solid #000;
+  padding: 10px 20px;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 3px 3px 0px #000;
+  position: relative;
+}
+
+.retro-button:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000;
+}
+
+.retro-button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+/* Retro card styles */
+.retro-card {
+  background: #fff;
+  border: 3px solid #000;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 4px 4px 0px #000;
+  transition: all 0.2s;
+}
+
+.retro-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000;
+}
+
+/* Pixel art borders */
+.pixel-border {
+  border: 2px solid #000;
+  box-shadow: 3px 3px 0px #000;
+}
+
+/* Retro color accents */
+.retro-blue {
+  background: #0066ff;
+  color: #fff;
+}
+
+.retro-pink {
+  background: #ff66cc;
+  color: #000;
+}
+
+.retro-yellow {
+  background: #ffff00;
+  color: #000;
 }
 
 @theme inline {
@@ -197,8 +310,8 @@ main {
 @layer base {
   * {
     @apply border-border outline-ring/50;
- }
+  }
   body {
     @apply bg-background text-foreground;
- }
+  }
 }

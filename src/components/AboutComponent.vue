@@ -1,7 +1,12 @@
 <template>
-  <section id="about" class="animated" @click="handleSectionClick('Tentang Saya')">
+  <section id="about" class="animated about-component" @click="handleSectionClick('Tentang Saya')">
     <h2>Tentang Saya</h2>
-    <p>Saya Akram Rahardi R, seorang pengembang frontend asal Indonesia. Saya memiliki keahlian dalam Vue.js, React.js, dan AngularJS. Portofolio ini dibuat untuk memperkenalkan keahlian dan proyek-proyek yang telah saya kerjakan.</p>
+    <div class="retro-card bg-white border-2 border-black p-4 font-mono text-sm leading-relaxed" style="box-shadow: 3px 3px 0px #000;">
+      <p>Frontend Developer dengan pengalaman lebih dari 4 tahun dalam JavaScript, TypeScript, VueJS, NuxtJS, AngularJS, ReactJS, dan NextJS. Terampil dalam membangun
+aplikasi web berkinerja tinggi, mengoptimalkan pengalaman pengguna, dan berkolaborasi dengan tim untuk memberikan solusi yang skalabel
+tepat waktu dengan praktik pengembangan web modern.
+</p>
+    </div>
   </section>
 </template>
 
@@ -18,5 +23,21 @@ export default {
 </script>
 
 <style scoped>
-/* Scoped styles for the About section */
+.retro-card {
+  font-family: "Courier New", monospace;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  transition: all 0.2s;
+}
+
+.retro-card:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000 !important;
+}
+
+.retro-card:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px #000 !important;
+}
 </style>

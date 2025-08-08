@@ -1,0 +1,18 @@
+/* AboutComponent Styles */
+.about-component .retro-card {
+  font-family: "Courier New", monospace;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  transition: all 0.2s;
+}
+
+.about-component .retro-card:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000 !important;
+}
+
+.about-component .retro-card:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px #000 !important;
+}

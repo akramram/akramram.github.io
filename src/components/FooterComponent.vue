@@ -1,5 +1,5 @@
 <template>
-  <footer class="animated">
+  <footer class="animated footer-component">
     <p>&copy; 2025 Frontend Web Developer Akram Rahardi R.</p>
   </footer>
 </template>

@@ -1,7 +1,7 @@
 <template>
-  <header class="animated">
-    <h1>Frontend Developer</h1>
-    <p>Akram Rahardi R</p>
+  <header class="animated header-component">
+    <h1 class="text-4xl font-bold uppercase tracking-wider mb-2">Frontend Developer</h1>
+    <p class="text-xl font-mono font-bold uppercase tracking-wide">Akram Rahardi R</p>
   </header>
 </template>
 
@@ -12,10 +12,4 @@ export default {
 </script>
 
 <style scoped>
-/* Scoped styles specific to the header, if any, would go here.
-   The global styles already cover the <header> element. */
-h1 {
-    font-size: 2.5em; /* From original index.html style */
-    font-weight: normal; /* From original index.html style */
-}
 </style>
