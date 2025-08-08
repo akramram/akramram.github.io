@@ -145,7 +145,7 @@ footer { /* Styles for <footer> element, used by FooterComponent */
   box-shadow: 6px 6px 0px #000;
   position: relative;
   max-width: 100%; /* Ensure it doesn't overflow */
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
