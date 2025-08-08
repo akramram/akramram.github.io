@@ -4,3 +4,5 @@ package-lock.json
 .env
 bun.lockb
 dist
+dist/index.html
+dist/assets/*
