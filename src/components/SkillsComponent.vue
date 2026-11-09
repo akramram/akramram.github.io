@@ -6,7 +6,7 @@
         <a 
           :href="skill.url" 
           target="_blank" 
-          class="retro-card inline-block w-full text-black bg-white border-2 border-black px-3 md:px-4 py-2 md:py-3 font-mono font-bold text-xs md:text-sm uppercase tracking-wide no-underline min-h-[44px] md:min-h-0 flex items-center justify-center break-words"
+          class="retro-card inline-block w-full text-black bg-white border-2 border-black px-3 md:px-4 py-2 md:py-3 font-mono font-bold text-xs md:text-sm uppercase tracking-wide no-underline min-h-[44px] md:min-h-0 flex items-center justify-center text-center break-words"
           style="box-shadow: 3px 3px 0px #000;"
         >
           {{ skill.name }}
@@ -26,29 +26,32 @@ export default {
   data() {
     return {
       skills: [
-        { name: 'Vue.js', url: 'https://vuejs.org' },
-        { name: 'Nuxt.js', url: 'https://nuxt.com' },
+        { name: 'Angular (v13–v21)', url: 'https://angular.dev' },
+        { name: 'Vue.js (Vue 3 / Vite)', url: 'https://vuejs.org' },
         { name: 'React.js', url: 'https://react.dev' },
         { name: 'Next.js', url: 'https://nextjs.org' },
-        { name: 'AngularJS', url: 'https://angularjs.org' },
         { name: 'TypeScript', url: 'https://www.typescriptlang.org/' },
-        { name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+        { name: 'Micro-Frontend (MFE)', url: 'https://micro-frontends.org/' },
         { name: 'Tailwind CSS', url: 'https://tailwindcss.com/' },
-        { name: 'Redux', url: 'https://redux.js.org/' },
+        { name: 'Signals & RxJS', url: 'https://rxjs.dev/' },
+        { name: 'Nx Monorepo', url: 'https://nx.dev/' },
+        { name: 'Supabase & PostgreSQL', url: 'https://supabase.com/' },
+        { name: 'REST API Gateway', url: 'https://swagger.io/' },
         { name: 'Shadcn/UI', url: 'https://ui.shadcn.com/' },
+        { name: 'MangoPay SDK', url: 'https://mangopay.com/' },
+        { name: 'Sumsub KYC SDK', url: 'https://sumsub.com/' },
+        { name: 'Midtrans SDK', url: 'https://docs.midtrans.com/' },
         { name: 'Stripe Payment SDK', url: 'https://stripe.com/docs/payments' },
-        { name: 'Sumsub SDK', url: 'https://sumsub.com/' },
-        { name: 'Midtrans Payment SDK', url: 'https://docs.midtrans.com/' },
         { name: 'Zoom Meeting SDK', url: 'https://marketplace.zoom.us/docs/sdk/native-sdks/web/' },
-        { name: 'HTML5', url: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5' },
-        { name: 'Chart.js', url: 'https://www.chartjs.org/' }
+        { name: 'MapLibre GL', url: 'https://maplibre.org/' },
+        { name: 'Automated Testing (Vitest/Jest)', url: 'https://vitest.dev/' },
+        { name: 'Docker & CI/CD', url: 'https://www.docker.com/' }
       ]
     }
   },
   methods: {
     handleSectionClick(sectionName) {
       // console.log(`You clicked on the ${sectionName} section.`);
-      // alert(`You clicked on the ${sectionName} section.`);
     }
   }
 }

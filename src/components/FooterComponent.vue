@@ -1,7 +1,7 @@
 <template>
   <footer class="animated footer-component">
     <p class="text-xs md:text-sm break-words">
-      © 2024 Akram Rahardi R. All rights reserved.
+      © 2026 Akram Rahardi R. All rights reserved.
     </p>
   </footer>
 </template>
