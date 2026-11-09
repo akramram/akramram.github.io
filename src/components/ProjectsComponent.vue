@@ -51,88 +51,92 @@ defineOptions({ name: 'ProjectsComponent' });
 
 const projects: Project[] = [
   {
-    "title": "Tomps by Telkom",
-    "description": "Jul 2022 - Sekarang"
+    title: "Pusat Sistem Informasi dan Teknologi Keuangan (Puspensi), Kemenkeu RI",
+    description: "Apr 2024 - Sekarang"
   },
   {
-    "title": "Pusat Sistem Informasi dan Teknologi Keuangan Kementerian Keuangan",
-    "description": "Apr 2024 - Des 2024"
+    title: "Telkom Indonesia (TDS / MyTEnS & TOMPS)",
+    description: "Jul 2022 - Sekarang"
   },
   {
-    "title": "Habilis",
-    "description": "Mar 2024 - Des 2024"
+    title: "Habilis Tech & Weaver (Klien Eropa)",
+    description: "Mar 2024 - Sekarang"
   },
   {
-    "title": "Skolla EdTech",
-    "description": "Sep 2020 - Jul 2022"
+    title: "Skolla EdTech",
+    description: "Sep 2020 - Jul 2022"
   },
   {
-    "title": "PT Digital Biru Indonesia / Frackment.id",
-    "description": "Okt 2019 - Sep 2020"
+    title: "PT Digital Biru Indonesia / Frackment.id",
+    description: "Okt 2019 - Sep 2020"
   },
   {
-    "title": "Mitra Edu Teknologi",
-    "description": "Agu 2019 - Sep 2020"
+    title: "Mitra Edu Teknologi",
+    description: "Agu 2019 - Sep 2020"
   }
 ];
 
 const items: ProjectItem[] = [
   {
-    title: "Tomps by Telkom",
+    title: "Pusat Sistem Informasi dan Teknologi Keuangan (Puspensi), Kemenkeu RI",
     items: [
-      { text: "Mengembangkan dan memelihara aplikasi web, memastikan performa optimal dan pengalaman pengguna yang baik.", type: "description" },
-      { text: "Berkolaborasi dengan tim lintas fungsi untuk merencanakan, mengeksekusi, dan menyelesaikan proyek tepat waktu dan sesuai lingkup.", type: "description" },
-      { text: "Proyek utama:", type: "header" },
-      { text: "Tomps Project Management: Membuat solusi manajemen proyek waktu nyata yang meningkatkan perencanaan, pemantauan, dan evaluasi proyek. Meningkatkan keterlibatan pengguna sebesar 30%.", type: "item" },
-      { text: "Tomps Asset Management: Mengembangkan portal komprehensif untuk manajemen aset tetap seperti gedung, lahan, dan pembangkit listrik. Mengurangi kesalahan pelacakan aset sebesar 20%.", type: "item" }
+      { text: "Frontend Engineer bertanggung jawab atas pengembangan arsitektur dan pemeliharaan antarmuka aplikasi web strategis Kemenkeu menggunakan Angular, TypeScript, dan Tailwind CSS dalam ekosistem SSO OIDC Kemenkeu dan Azure DevOps.", type: "description" },
+      { text: "Proyek & Modul Inti:", type: "header" },
+      { text: "HRIS 2.0 (Sistem Utama ASN Kemenkeu): Mengembangkan modul Cuti Pegawai (perhitungan otomatis potongan tukin, kuota tambahan, verifikasi pengelola) dan modul Hukuman Disiplin / Hukdis (pencatatan pelanggaran dinas berjenjang, pembuatan digital BAP/BAK/LHPD, tanda tangan elektronik Nadine). Menulis 260+ commit terverifikasi pada codebase inti dengan zero downtime.", type: "item" },
+      { text: "e-Grading HRIS 2.0: Mengembangkan alur penetapan sidang kenaikan grading jabatan DJPb (daftar nominatif, asesmen kemampuan kerja, persetujuan pimpinan berjenjang, hingga validasi SK). Merancang arsitektur rute /hris2/egrading dan dokumentasi ADR 0001–0009 standar integrasi tim.", type: "item" },
+      { text: "Arjuna & Arjuna MFE: Mengembangkan fitur Manajemen Eksekutif berbasis rentang tanggal jabatan pimpinan (Menteri Keuangan & Wamen I–III) pada Arjuna.web, serta memimpin modernisasi Micro-Frontend (remoteArjuna, Angular 21, keu-ui, signal-based state management).", type: "item" },
+      { text: "Pinset: Mengembangkan modul Pengelola Aset (/aset-dikelola, alokasi aset organisasi, distribusi non-BMN) terintegrasi data SIMAN 2 & layanan transportasi dinas SiKendi. Memperbarui kontrak Swagger REST API v2 dengan role-switching dinamis.", type: "item" }
     ]
   },
   {
-    title: "Pusat Sistem Informasi dan Teknologi Keuangan Kementerian Keuangan",
+    title: "Telkom Indonesia (TDS / MyTEnS & TOMPS)",
     items: [
-      { text: "Mengembangkan Human Resource Information System (HRIS) menggunakan AngularJS dan Tailwind. Sistem ini mengelola data karyawan dan proses HR secara efisien, dengan fokus pada desain ramah pengguna, performa tinggi, dan skalabilitas.", type: "item" },
-      { text: "Mengembangkan dan memelihara solusi web untuk mengoptimalkan prosedur organisasi.", type: "item" },
-      { text: "Bekerja sama dalam tim untuk membuat dan mengeksekusi codebase yang scalable dan efektif.", type: "item" },
-      { text: "Meningkatkan pengalaman pengguna dengan menerapkan teknik dan standar pengembangan web modern.", type: "item" }
+      { text: "Frontend Engineer mengembangkan portal enterprise BUMN dan platform sales B2B skala nasional.", type: "description" },
+      { text: "Proyek Utama:", type: "header" },
+      { text: "MyTEnS Web: Merancang modul Profitability Tools v2 (rilis di v2.30.0) untuk kalkulasi otomatis kelayakan finansial proyek telekomunikasi berbasis skema form dinamis backend. Mengoptimalkan alur Risk Project Assessment (RPA) dan workflow Direct Lead Dispatch antar unit Witel.", type: "item" },
+      { text: "TOMPS Project Management (SDA): Mengembangkan modul project charter, pelacakan deliverables, hingga handover proyek pada lini live multi-tenant SDA (pm.mytens.co.id) menggunakan Vue 3 + Vite. Meningkatkan keterlibatan aktif pengguna (user engagement) sebesar 30%.", type: "item" },
+      { text: "TOMPS Asset Management: Membangun portal inventarisasi aset tetap (gedung, lahan, pembangkit listrik) menurunkan kesalahan pelacakan fisik aset 20%. Mengembangkan purwarupa analitik spasial Dashboard Danantara (MapLibre GL JS, rendering dataset >200 ribu aset negara).", type: "item" }
     ]
   },
   {
-    title: "Habilis",
+    title: "Habilis Tech & Weaver (Klien Eropa)",
     items: [
-      { text: "Mengembangkan aplikasi menggunakan NextJS, Redux, Shadcn/UI, Tailwind, mengimplementasikan notifikasi real-time, dan mengintegrasikan Sumsub SDK, dan Stripe Payment SDK, termasuk:", type: "description" },
-      { text: "Home Investment Platform: Platform investasi properti yang scalable dengan pengalaman pengguna mulus dan desain intuitif, memungkinkan update data real-time untuk keputusan investasi yang lebih baik.", type: "item" },
-      { text: "Branded Goods Rental Platform: Platform sewa barang bermerek yang ramah pengguna dengan integrasi pembayaran aman dan manajemen inventaris efisien.", type: "item" },
-      { text: "Employee Profile Data Management System: Sistem internal untuk manajemen dan update data karyawan, terintegrasi dengan database perusahaan.", type: "item" },
-      { text: "Music Sales Platform: Platform e-commerce penjualan musik dengan performa tinggi dan manajemen konten multimedia.", type: "item" },
-      { text: "Content Management System (CMS): CMS untuk mempercepat update konten lintas platform, mudah diintegrasikan dengan aplikasi yang sudah ada.", type: "item" }
+      { text: "Senior Frontend / Fullstack Engineer mengembangkan ekosistem aplikasi web skala besar berbasis Nx Monorepo, Next.js (App Router), Supabase, dan cloud AWS untuk berbagai klien di Perancis dan Eropa.", type: "description" },
+      { text: "Proyek & Produk:", type: "header" },
+      { text: "Square Rénovation (Prancis): Bertindak sebagai sole developer (Next.js, Supabase, Vercel) mengelola alur CRM operasional renovasi dari prospek, Plan de charge, atribusi teknis, hingga dossier subkontraktor. Menulis dan merawat 1.000+ automated unit & integration tests, 60+ migrasi database PostgreSQL, integrasi transaksi otomatis Brevo API, dan sinkronisasi Google Calendar API.", type: "item" },
+      { text: "SonarPay: Mengembangkan sistem otentikasi multi-organisasi BDE, manajemen sesi berbasis JWT, integrasi checkout via MangoPay SDK, arsitektur reaktivasi akun terhapus, dan multi-fallback transactional email.", type: "item" },
+      { text: "RozHome: Mengintegrasikan verifikasi identitas Sumsub KYC/AML SDK dengan penanganan state loading asinkron, serta modul filter analitik transaksi dompet digital & retail pada Backoffice admin.", type: "item" },
+      { text: "Exo Monorepo: Mengembangkan antarmuka Backoffice & Admin berbasis Nx Monorepo, integrasi cloud AWS (Lambda, S3, SES, Pinpoint SMS), antarmuka interaktif drag-and-drop (@dnd-kit), dan sinkronisasi Resamania API.", type: "item" },
+      { text: "CompanionCare & Wilih Monorepo: Aplikasi web kesehatan lansia (CompanionCare) dan retail (Wilih) dengan antarmuka responsif mobile-first / PWA serta optimasi zero layout-shift.", type: "item" },
+      { text: "NFA B2B Supply Chain Platform: Membangun aplikasi rantai pasok cetak & retail B2B dengan alur pemesanan 5 tahap dan sistem impersonasi akun multi-toko.", type: "item" }
     ]
   },
   {
     title: "Skolla EdTech",
     items: [
-      { text: "Memimpin redesign aplikasi, meningkatkan responsivitas dan efisiensi.", type: "description" },
-      { text: "Mengembangkan komponen reusable, menyelesaikan isu zona waktu, mengimplementasikan notifikasi real-time, dan mengintegrasikan Zoom Meeting SDK serta Midtrans Payment SDK.", type: "description" },
-      { text: "Proyek:", type: "header" },
-      { text: "Skolla Student: Platform pembelajaran digital dengan latihan soal, video, dan kelas live.", type: "item" },
-      { text: "Skolla Admin: CMS untuk bank soal, tryout, dan kelas live.", type: "item" },
-      { text: "Skolla Landing Page: Web profil perusahaan untuk menampilkan layanan Skolla EdTech, dioptimalkan untuk performa dan aksesibilitas.", type: "item" }
+      { text: "Memimpin pembaruan arsitektur antarmuka web Vue.js untuk platform Skolla EdTech, meningkatkan responsivitas dan reliabilitas sistem pembelajaran daring.", type: "description" },
+      { text: "Proyek & Integrasi:", type: "header" },
+      { text: "Skolla Student: Platform pembelajaran digital interaktif dengan fitur latihan soal, video materi, dan kelas online langsung.", type: "item" },
+      { text: "Skolla Admin: Content Management System (CMS) untuk pengelolaan bank soal, penyelenggaraan tryout nasional, dan jadwal kelas live.", type: "item" },
+      { text: "Skolla Landing Page: Web profil perusahaan untuk layanan edukasi, dioptimalkan untuk performa, aksesibilitas, dan SEO.", type: "item" },
+      { text: "Integrasi SDK: Mengintegrasikan Zoom Meeting Web SDK untuk ruang kelas interaktif dan Midtrans Payment Gateway untuk penagihan langganan otomatis.", type: "item" }
     ]
   },
   {
     title: "PT Digital Biru Indonesia / Frackment.id",
     items: [
-      { text: "Membangun dan memelihara aplikasi web responsif dan ramah pengguna menggunakan NuxtJS, dengan fokus pada performa tinggi dan pengalaman pengguna yang mulus.", type: "description" },
+      { text: "Membangun dan memelihara aplikasi web responsif dan ramah pengguna menggunakan Nuxt.js dan React, dengan fokus pada performa tinggi dan pengalaman pengguna yang mulus.", type: "description" },
       { text: "Proyek:", type: "header" },
-      { text: "Self Service Hotel Booking: Aplikasi pemesanan hotel mandiri berbasis web, memudahkan pengguna melakukan reservasi melalui antarmuka intuitif.", type: "item" },
-      { text: "Noblar: Platform kolaborasi menonton konten berbasis web, memungkinkan pengguna menonton bersama secara real-time dengan interaksi yang lancar.", type: "item" }
+      { text: "Self Service Hotel Booking: Aplikasi pemesanan hotel mandiri berbasis web Nuxt.js, memudahkan tamu melakukan reservasi instan melalui antarmuka intuitif.", type: "item" },
+      { text: "Noblar: Platform kolaboratif menonton konten streaming bersama berbasis React.js secara real-time.", type: "item" }
     ]
   },
   {
     title: "Mitra Edu Teknologi",
     items: [
-      { text: "Memimpin migrasi ke VueJS, mengembangkan dan memelihara aplikasi web termasuk Dashboard SIPPKLING, serta bekerja sama dengan tim lintas fungsi untuk memastikan pengalaman pengguna yang mulus dan performa tinggi di seluruh platform.", type: "description" },
-      { text: "Mengelola platform monitoring Rumah Sehat di Depok.", type: "description" },
-      { text: "Visualisasi data dalam bentuk chart untuk dashboard analitik, meningkatkan pengambilan keputusan dengan insight yang jelas.", type: "description" }
+      { text: "Memimpin migrasi stack frontend ke Vue.js, mengembangkan dashboard pemantauan kesehatan publik, dan berkolaborasi dengan pemangku kepentingan.", type: "description" },
+      { text: "Proyek:", type: "header" },
+      { text: "Dashboard SIPPKLING: Sistem monitoring sanitasi Rumah Sehat untuk Dinas Kesehatan Kota Depok dengan visualisasi grafik analitik interaktif untuk mendukung pengambilan keputusan klinis dan administratif.", type: "item" }
     ]
   }
 ];
